@@ -1,26 +1,26 @@
-# is
+# isit
 
 simple type detection
 
 # Usage
 
 ```js
-var is = require('is');
+var is = require('isit');
 
 console.log(is().nil); // true
 
-var type = is([]);
+var isit = is([]);
 
-console.log(type.nil); // false
-console.log(type.array); // true
+console.log(isit.nil); // false
+console.log(isit.array); // true
 ```
 
 # Install
 
 ```sh
-npm install is
+npm install isit
 ```
 
 # Motivation
 
-Wrap simple type detections in a tiny, performant library
+Straightforward type detection
