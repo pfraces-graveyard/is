@@ -1,8 +1,8 @@
 {
-  "name": "is",
+  "name": "isit",
   "version": "0.1.0",
   "description": "simple type detection",
-  "main": "is.js",
+  "main": "isit.js",
   "dependencies": {},
   "keywords": [
     "type"
