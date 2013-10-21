@@ -1,0 +1,12 @@
+{
+  "name": "is",
+  "version": "0.1.0",
+  "description": "simple type detection",
+  "main": "is.js",
+  "dependencies": {},
+  "keywords": [
+    "type"
+  ],
+  "author": "Pau Fracés <pfraces@gmail.com>",
+  "license": "MIT"
+}
