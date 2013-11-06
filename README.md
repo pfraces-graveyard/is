@@ -1,6 +1,6 @@
 # isit
 
-simple type detection
+Simple type detection
 
 # Usage
 
@@ -8,6 +8,8 @@ simple type detection
 var is = require('isit');
 
 console.log(is().nil); // true
+console.log(is(2).nil); // false
+console.log(is(2).number); // true
 
 var isit = is([]);
 
