@@ -1,17 +1,49 @@
+var nil = function (obj) {
+  return obj == null;
+};
+
+var bool = function (obj) {
+  return typeof obj === 'boolean';
+};
+
+var number = function (obj) {
+  return typeof obj === 'number';
+};
+
+var string = function (obj) {
+  return typeof obj === 'string';
+};
+
+var object = function (obj) { 
+  return Object.prototype.toString.call(obj) === '[object Object]';
+};
+
+var array = function (obj) {
+  return obj instanceof Array;
+};
+
+var func = function (obj) {
+  return typeof obj === 'function';
+};
+
+var primitive = function (obj) {
+  return typeof obj !== 'object' && !func(obj);
+};
+
+var tree = function (obj) {
+  return array(obj) || object(obj);
+};
+
 var tofs = {
-  nil: function (obj) { return obj == null; },
-  bool: function (obj) { return typeof obj === 'boolean'; },
-  number: function (obj) { return typeof obj === 'number'; },
-  string: function (obj) { return typeof obj === 'string'; },
-  object: function (obj) { 
-    return Object.prototype.toString.call(obj) === '[object Object]'
-  },
-  array: function (obj) { return obj instanceof Array; },
-  func: function (obj) { return typeof obj === 'function'; },
-  primitive: function (obj) {
-    var tof = typeof obj;
-    return tof !== 'object' && tof !== 'function';
-  }
+  nil: nil,
+  bool: bool,
+  number: number,
+  string: string,
+  object: object,
+  array: array,
+  func: func,
+  primitive: primitive,
+  tree: tree
 };
 
 var Tof = function (obj) {
