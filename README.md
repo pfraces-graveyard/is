@@ -1,20 +1,23 @@
-# isit
+# Tof
 
 Simple type detection
 
 # Usage
 
 ```js
-var is = require('isit');
+var tof = require('tof');
 
-console.log(is().nil); // true
-console.log(is(2).nil); // false
-console.log(is(2).number); // true
+console.log(tof().nil()); // true
+console.log(tof(2).nil()); // false
+console.log(tof(2).number()); // true
+```
 
-var isit = is([]);
+Alternative API
 
-console.log(isit.nil); // false
-console.log(isit.array); // true
+```js
+console.log(tof.nil()); // true
+console.log(tof.nil(2)); // false
+console.log(tof.number(2)); // true
 ```
 
 # Install
@@ -26,3 +29,9 @@ npm install isit
 # Motivation
 
 Straightforward type detection
+
+# References
+
+*   [T.J. Crowder's post about types][1]
+
+[1]: http://blog.niftysnippets.org/2010/09/say-what.html
