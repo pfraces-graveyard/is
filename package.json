@@ -2,7 +2,7 @@
   "name": "tof",
   "version": "0.1.2",
   "description": "simple type detection",
-  "main": "isit.js",
+  "main": "tof.js",
   "dependencies": {},
   "keywords": [
     "type"

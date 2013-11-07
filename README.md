@@ -23,7 +23,7 @@ console.log(tof.number(2)); // true
 # Install
 
 ```sh
-npm install isit
+npm install tof
 ```
 
 # Motivation
