@@ -7,7 +7,11 @@ var tofs = {
     return Object.prototype.toString.call(obj) === '[object Object]'
   },
   array: function (obj) { return obj instanceof Array; },
-  func: function (obj) { return typeof obj === 'function'; }
+  func: function (obj) { return typeof obj === 'function'; },
+  primitive: function (obj) {
+    var tof = typeof obj;
+    return tof !== 'object' && tof !== 'function';
+  }
 };
 
 var Tof = function (obj) {
