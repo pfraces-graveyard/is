@@ -1,9 +1,8 @@
 {
-  "name": "tof",
-  "version": "0.1.4",
+  "name": "u.is",
+  "version": "0.0.5",
   "description": "simple type detection",
-  "main": "tof.js",
-  "dependencies": {},
+  "main": "is.js",
   "keywords": [
     "type"
   ],

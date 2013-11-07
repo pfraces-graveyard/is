@@ -1,29 +1,21 @@
-# Tof
+# Is
 
-Simple type detection
+Collection of basic type checks
 
 # Usage
 
 ```js
-var tof = require('tof');
+var is = require('u.is');
 
-console.log(tof().nil()); // true
-console.log(tof(2).nil()); // false
-console.log(tof(2).number()); // true
-```
-
-Alternative API
-
-```js
-console.log(tof.nil()); // true
-console.log(tof.nil(2)); // false
-console.log(tof.number(2)); // true
+console.log(is.nil()); // true
+console.log(is.nil(2)); // false
+console.log(is.number(2)); // true
 ```
 
 # Install
 
 ```sh
-npm install tof
+npm install u.is
 ```
 
 # Motivation
