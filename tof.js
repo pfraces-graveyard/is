@@ -1,65 +1,27 @@
-var nil = function (obj) {
+module.exports.nil = function (obj) {
   return obj == null;
 };
 
-var bool = function (obj) {
+module.exports.bool = function (obj) {
   return typeof obj === 'boolean';
 };
 
-var number = function (obj) {
+module.exports.number = function (obj) {
   return typeof obj === 'number';
 };
 
-var string = function (obj) {
+module.exports.string = function (obj) {
   return typeof obj === 'string';
 };
 
-var object = function (obj) { 
+module.exports.object = function (obj) { 
   return Object.prototype.toString.call(obj) === '[object Object]';
 };
 
-var array = function (obj) {
+module.exports.array = function (obj) {
   return obj instanceof Array;
 };
 
-var func = function (obj) {
+module.exports.func = function (obj) {
   return typeof obj === 'function';
 };
-
-var primitive = function (obj) {
-  return typeof obj !== 'object' && !func(obj);
-};
-
-var tree = function (obj) {
-  return array(obj) || object(obj);
-};
-
-var tofs = {
-  nil: nil,
-  bool: bool,
-  number: number,
-  string: string,
-  object: object,
-  array: array,
-  func: func,
-  primitive: primitive,
-  tree: tree
-};
-
-var Tof = function (obj) {
-  this.obj = obj;
-};
-
-module.exports = function (obj) {
-  return new Tof(obj);
-};
-
-for (var tof in tofs) (function () {
-  var prop = tof;
-
-  Tof.prototype[prop] = function () {
-    return tofs[prop](this.obj);
-  };
-
-  module.exports[prop] = tofs[prop];
-})();
