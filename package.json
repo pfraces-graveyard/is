@@ -1,7 +1,7 @@
 {
   "name": "u.is",
   "version": "0.0.5",
-  "description": "simple type detection",
+  "description": "A collection of basic type checks",
   "main": "is.js",
   "keywords": [
     "type"

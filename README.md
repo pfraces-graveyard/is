@@ -1,6 +1,6 @@
 # Is
 
-Collection of basic type checks
+A collection of basic type checks
 
 # Usage
 
