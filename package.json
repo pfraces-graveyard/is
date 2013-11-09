@@ -1,6 +1,6 @@
 {
   "name": "u.is",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A collection of basic type checks",
   "main": "is.js",
   "keywords": [
